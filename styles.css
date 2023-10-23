@@ -53,8 +53,8 @@
       height: 80%;
       background-color: var(--dark-purple);
       color: var(--white);
-      padding: 130px;
-      /* width: 100vw; */
+      padding: 100px;
+      width: 90vw; 
     }
     
     h1 {
