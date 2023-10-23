@@ -175,17 +175,45 @@ a {
 
 
 .credits {
-  background-color: var(--dark-purple);
-  border-top: 2px solid var(--red);
+  display: flex;
+  flex-direction: column;
+  padding: 50px 20px;
+  background-color: #333;
+  border-top: 3px solid #ed6a5a;
+  justify-content: center;
   text-align: center;
-  padding: 20px 0;
+  animation: fadeInUp 1.5s;
 }
 
 .credits h3 {
-  font-size: 18px;
-  margin-bottom: 10px;
+  font-weight: normal;
+  color: #fff;
+  font-size: 20px;
+  text-align: center;
+  vertical-align: top;
+  margin: 0;
+  padding: 0 20px;
+  transition: color 0.3s ease-in-out;
 }
-/* ... (previous styles) ... */
+.credits:hover {
+  background-color: #ed6a5a;
+}
+
+.credits h3:hover {
+  color: #fff;
+  transition: color 0.3s ease-in-out;
+}
+
+@keyframes fadeInUp {
+  from {
+      transform: translateY(20px);
+      opacity: 0;
+  }
+  to {
+      transform: translateY(0);
+      opacity: 1;
+  }
+}
 
 #sidebar {
   position: sticky;
@@ -395,4 +423,56 @@ h3:hover {
 
 .animated-project {
   animation: bounce 0.8s;
+}
+.sm-links {
+  display: flex;
+  justify-content: center;
+  animation: fadeInUp 1.5s;
+}
+
+.sm-links a {
+  color: #fff;
+  text-decoration: none;
+  margin: 0 20px;
+  font-size: 24px;
+  transition: transform 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+.sm-link {
+  display: inline-block;
+  padding: 10px 20px;
+  border: 2px solid #ed6a5a;
+  border-radius: 5px;
+  background-color: transparent;
+  color: #ed6a5a;
+  text-transform: uppercase;
+  font-size: 18px;
+  transition: transform 0.3s ease-in-out, color 0.3s ease-in-out, background-color 0.3s ease-in-out;
+}
+
+/* New styles and animations for the buttons */
+
+.sm-links a:hover {
+  color: #ed6a5a;
+  transform: scale(1.1);
+  animation: bounce 0.5s;
+}
+
+.sm-link:hover {
+  background-color: #ed6a5a;
+  color: #fff;
+  transform: scale(1.1);
+  animation: bounce 0.5s;
+}
+
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+      transform: translateY(0);
+  }
+  40% {
+      transform: translateY(-10px);
+  }
+  60% {
+      transform: translateY(-5px);
+  }
 }
